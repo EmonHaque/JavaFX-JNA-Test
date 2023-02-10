@@ -11,4 +11,4 @@ LibTessCV contains the code for c++ shared library
 	2) To compile the native library you've to have libopencv4-devel and tesseract-ocr-devel installed. Those ..-devel are the names in void linux repo
 -----------------------------------------------
 
-It just converts image color and extracts text from image. Not bad, looks like the chickes are hatching well in the incubator.
+It just converts image color and extracts text from image. Not bad, looks like the chickens are hatching well in the incubator.
