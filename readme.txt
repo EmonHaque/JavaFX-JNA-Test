@@ -23,4 +23,4 @@ CallbackFX is JavaFX Application and LibCallback is the C shared library. Change
     interface ICallback extends Callback {
         void call(Person person);
     }
-5) obtain C function pointer with Function.getFunction("nativeLibraryLocation, "functionName");
+5) obtain C function pointer with Function.getFunction("nativeLibraryLocation", "functionName");
