@@ -12,3 +12,15 @@ LibTessCV contains the code for c++ shared library
 -----------------------------------------------
 
 It just converts image color and extracts text from image. Not bad, looks like the chickens are hatching well in the incubator.
+===============================================
+
+CallbackFX is JavaFX Application and LibCallback is the C shared library. Change the location of nativeLib in public void init() of CallbackFX. 
+
+1) when you click the button of CallbackFX, C calls a Java function three times and Java calls a C function 3 times
+2) void keepCallingJavaFunction(int times) of Program C calls an anonymous Java function
+3) private Function sumInteger of App.java points to int sumInteger(int x, int y) function of Program.c
+4) pass Java function to C using Callback interface, see CallbackWrapper.java
+    interface ICallback extends Callback {
+        void call(Person person);
+    }
+5) obtain C function pointer with Function.getFunction("nativeLibraryLocation, "functionName");
