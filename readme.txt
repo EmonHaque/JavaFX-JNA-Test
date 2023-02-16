@@ -24,7 +24,7 @@ CallbackFX is JavaFX Application and LibCallback is the C shared library. Change
         void call(Person person);
     }
 5) obtain C function pointer with Function.getFunction("nativeLibraryLocation", "functionName");
-=================================
+===============================================
 
 1) SQLite-Callback-Stream is the JavaFX application and SQLIteJNA-Lib is the native library.
 2) Change database location in public void init(), wrapper.openDatabase("/mnt/HDD/Corpus Quran/quran.db"). If you want to use same database, you can get that from ETL_Quran repo. Also change th location in NativeWrapper.java, Native.register("/home/emon/SQLIteJNA/sqlitejna.so");
