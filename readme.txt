@@ -24,3 +24,10 @@ CallbackFX is JavaFX Application and LibCallback is the C shared library. Change
         void call(Person person);
     }
 5) obtain C function pointer with Function.getFunction("nativeLibraryLocation", "functionName");
+=================================
+
+1) SQLite-Callback-Stream is the JavaFX application and SQLIteJNA-Lib is the native library.
+2) Change database location in public void init(), wrapper.openDatabase("/mnt/HDD/Corpus Quran/quran.db"). If you want to use same database, you can get that from ETL_Quran repo. Also change th location in NativeWrapper.java, Native.register("/home/emon/SQLIteJNA/sqlitejna.so");
+3) type sql query in the text area on the left and click execute button
+
+It's good when you handover small thing from java, let C/C++ do some intensive operation with that thing and get some small thing back from C/C++ in java. When you want to stream data from C/C++ via CallBack it's ~10 times slower. If you comment out the java callback parts in static int callback(...) of SQLiteJNA you'll notice the difference.
