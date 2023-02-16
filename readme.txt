@@ -31,3 +31,5 @@ CallbackFX is JavaFX Application and LibCallback is the C shared library. Change
 3) type sql query in the text area on the left and click execute button
 
 It's good when you handover small thing from java, let C/C++ do some intensive operation with that thing and get some small thing back from C/C++ in java. When you want to stream data from C/C++ via CallBack it's ~10 times slower. If you comment out the java callback parts in static int callback(...) of SQLiteJNA you'll notice the difference.
+
+One more JavaFX issue, how do you customise TableCell, with/in java, when you get variable length String[] as model? TableView is on the right and depending upon the query, column length will be changed.
